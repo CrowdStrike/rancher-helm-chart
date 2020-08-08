@@ -39,7 +39,7 @@ Questions? Ideas? Here's what to do:
 ## Team
 
 | Executive Sponsor(s) | Project Owner(s) | Stakeholders | Contributors | Questions? |
-|:-----------------:|:----------------|:--------------|:-------------|:-------------|:-----------|
+|:--------------------:|:-----------------|:-------------|:-------------|:-----------|
 | Shawn Wells<br/>Vice President, Global Solution Architecture, CrowdStrike<br/>[@shawndwells](https://github.com/shawndwells)<br/><br/>Keith Basil<br/>Vice President, Edge Solutions, Rancher<br/>[@noslzzp](https://github.com/noslzzp) | Chris Kachigian<br/>Sr Director, Technical Integrations & OEMs, CrowdStrike<br/>[@ckachigian](https://github.com/ckachigian) | TBD | TBD | TBD |
 
 ## Open Decision Making Targets
