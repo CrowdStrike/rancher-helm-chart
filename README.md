@@ -39,7 +39,7 @@ Questions? Ideas? Here's what to do:
 ## Team
 
 | Executive Sponsor(s) | Project Owner(s) | Stakeholders | Contributors | Questions? |
-|:--------------------:|:-----------------|:-------------|:-------------|:-----------|
+|:--------------------:|:----------------:|:------------:|:------------:|:-----------|
 | Shawn Wells<br/>Vice President, Global Solution Architecture, CrowdStrike<br/>[@shawndwells](https://github.com/shawndwells)<br/><br/>Keith Basil<br/>Vice President, Edge Solutions, Rancher<br/>[@noslzzp](https://github.com/noslzzp) | Chris Kachigian<br/>Sr Director, Technical Integrations & OEMs, CrowdStrike<br/>[@ckachigian](https://github.com/ckachigian) | TBD | TBD | TBD |
 
 ## Open Decision Making Targets
@@ -61,8 +61,9 @@ Based on our project team's experience and the scope of this project, we are aim
 * TBD
 
 ## Constraints
-* Key constraints on the decision or project
-* Include relevant legal, reporting, confidentiality, etc. factors (to the extent possible)
+* While Kubernetes Helm charts [follow an open specification](https://helm.sh/docs/topics/chart_template_guide/), Rancher's Helm charts differ slightly in directory structure from upstream Helm repos. To align with Rancher's partner and ISV certification program, this project must use the [Rancher-specific Helm directory structure and specifications](https://github.com/rancher/charts).
+
+* To ensure supportability by [CrowdStrike Customer Service](https://www.crowdstrike.com/contact-support/) of Falcon agent deployments on Rancher RKE or K3, the Helm chart must use [CrowdStrike's supported Ubuntu packages](https://falcon.crowdstrike.com/hosts/sensor-downloads). 
 
 ## Assumptions
 This is where you'll want to state the obvious (and invite others to question your reasoning). Need help?
@@ -70,27 +71,26 @@ This is where you'll want to state the obvious (and invite others to question yo
 * [Have You Checked Your Assumptions Lately? | Inc.com](https://www.inc.com/robert-kaplan/have-you-challenged-your-assumptions-lately.html)
 
 ## Risks
-* Known risks, potential areas of controversy, cultural impacts, unintended impacts
+(*Known risks, potential areas of controversy, cultural impacts, unintended impacts*.)
+
+TBD.
 
 ## Decision Criteria
 * High-level, most important criteria
 * Weighted importance
 
 ### Scope
-* Clearly define what's in and out of scope. Link to details explaining why, if needed.
+* TBD
 
 ### Tradeoffs
-* When you have to give something up to gain something better, explain it here.
-
-### Revisiting This Decision
-When do you anticipate revisiting this decision? Timeline or criteria or key factors that would contribute.
-
-### How to Provide Feedback After Launch
-* Think about this, then include some version in your fact base at each phase of the project, to demonstrate your willingness to own the outcome of the decision.
+| Tradeoff | Trigger(s) to Revisit Decision |
+|:---------|:-----------------------------|
+| While K3s [should run on just about any flavor of Linux](https://rancher.com/docs/k3s/latest/en/installation/installation-requirements/), Rancher limits official support and testing of to Ubuntu 16.04, Ubuntu 18.04, and Raspbian Buster. To accelerate time to market, this project will focus only on Ubuntu 16.04 LTS and Ubuntu 18.04 LTS on amd64. | <ul><li>Rancher formally expanding support to other Linux distributions that CrowdStrike's Falcon agent supports.<br/><br/></li><li>Customer requests to support expand testing to one of Falcon's supported Linux distributions (ref: [What Linux versions does Falcon agent support?](https://www.crowdstrike.com/endpoint-security-products/crowdstrike-falcon-faq/)).</li></ul>|
 
 ## Research
 
 ### Feedback Gathered
+This project is still initializing. As feedback is received, this section will contain:
 * Summarize + link to details
 * Changes made based on feedback
 * Changes not made, despite feedback (and why)
@@ -98,7 +98,7 @@ When do you anticipate revisiting this decision? Timeline or criteria or key fac
 * Post-launch feedback and metrics
 
 ### Data and Findings
-* Summarize and link to details
+(*Summarize and link to details*)
 
 ## Background
 
@@ -112,15 +112,15 @@ In August 2020, [CrowdStrike](https://www.crowdstrike.com/) and [Rancher](https:
 With Rancher and CrowdStrike integrated together, security teams can secure container-based IoT and Edge infrastructure at the speed of DevOps without adding friction.
 
 ### About the Problem
-CrowdStrike and Rancher perceived a market need to provide an integrated solution that spans across cybersecurity detection, response, and forensics to stop breaches and provide extensive visibility into IoT and Edge infrastructure based off Rancher RKE and k3s technologies.
+[According to Gartner](https://www.gartner.com/smarterwithgartner/what-edge-computing-means-for-infrastructure-and-operations-leaders/), 75 percent of enterprise data will be created and processed outside of data centers and cloud deployments by 2025. This shift of computing to the edge drives a market need to provide an integrated solution that spans cybersecurity detection, response, and forensives to stop breaches and provide extensive visibility into IoT and Edge infrastructure. 
+
+The Rancher and CrowdStrike integration provides an integrated solution that spans across cybersecurity detection, response, and forensics to stop breaches and provide extensive visibility into IoT and Edge infrastructure based off Rancher RKE and k3s technologies.
 
 With this integration, joint customers can achieve the following:
 
 * **Replace existing legacy AV solutions:** Receive protection against malware and malware-free attacks for online/offline endpoints in cloud and on-premise IoT and edge environments;
 
 * **Comprehensive monitoring:** Comprehensive and continuous real-time and historical visibility into Rancher RKE and k3s infrastructure, to identify and prevent threat activities as they happen.
-
-* **Visibility across Rancher-based IoT and Edge infrastructure:** Falcon Discover empowers Rancher customers to visualize and h
 
 Problems we're ***not*** trying to solve:
 * Related problems that you know people will ask you about
