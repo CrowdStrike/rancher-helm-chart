@@ -85,7 +85,7 @@ TBD.
 ### Tradeoffs
 | Tradeoff | Trigger(s) to Revisit Decision |
 |:---------|:-----------------------------|
-| While K3s [should run on just about any flavor of Linux](https://rancher.com/docs/k3s/latest/en/installation/installation-requirements/), Rancher limits official support and testing of to Ubuntu 16.04, Ubuntu 18.04, and Raspbian Buster. To accelerate time to market, this project will focus only on Ubuntu 16.04 LTS and Ubuntu 18.04 LTS on amd64. | <ul><li>Rancher formally expanding support to other Linux distributions that CrowdStrike's Falcon agent supports.<br/><br/></li><li>Customer requests to support expand testing to one of Falcon's supported Linux distributions (ref: [What Linux versions does Falcon agent support?](https://www.crowdstrike.com/endpoint-security-products/crowdstrike-falcon-faq/)).</li></ul>|
+| While K3s [should run on just about any flavor of Linux](https://rancher.com/docs/k3s/latest/en/installation/installation-requirements/), Rancher limits official support and testing of to Ubuntu 16.04, Ubuntu 18.04, and Raspbian Buster. **To accelerate time to market, this project will initially focus on Ubuntu 18.04 LTS on amd64.** | <ul><li>Rancher formally expanding k3s support to other Linux distributions that CrowdStrike's Falcon agent supports, such as Red Hat Enterprise Linux.<br/><br/></li><li>Customer requests to support expand testing to one of Falcon's supported Linux distributions (ref: [What Linux versions does Falcon agent support?](https://www.crowdstrike.com/endpoint-security-products/crowdstrike-falcon-faq/)).</li></ul>|
 
 ## Research
 
