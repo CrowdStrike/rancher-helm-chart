@@ -1,0 +1,28 @@
+apiVersion: v1
+kubeVersion: >= v1.13.0
+name: falcon-sensor
+description: A Helm chart to deploy CrowdStrike Falcon sensors into k3s clusters.
+
+type: application
+
+keywords:
+    - CrowdStrike
+    - Falcon
+    - EDR
+    - k3s
+    - kubernetes
+
+home: https://github.com/CrowdStrike/rancher-helm-chart
+
+sources:
+    - https://github.com/CrowdStrike/rancher-helm-chart
+
+maintainers:
+    - name: CrowdStrike Solution Architecture
+    - name: Shawn Wells
+      email: shawn.wells@crowdstrike.com
+
+icon: ../crowdstrike-logo.svg
+
+appVersion: v0.1.0
+
