@@ -18,7 +18,7 @@ questions:
       label: Container Image Repository
       group: "Required Configuration Settings"
 
-    - variable IMAGE_TAG
+    - variable: IMAGE_TAG
       description: "Container registry image tag. Defaults to 'latest'."
       required: false
       type: string
